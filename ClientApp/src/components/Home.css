@@ -1,0 +1,27 @@
+.box {
+    
+    margin-left: 33%;
+    width: 33%;
+    height: 200px;
+    align-self: center;
+    background-color: white;
+    color: black;
+    
+    
+}
+.boxTwo {
+    
+    margin-left: 33%;
+    width: 33%;
+    height: 200px;
+    align-self: center;
+    background-color: white;
+    color: black;
+    margin-top: 150px;
+    
+}
+
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem black;
+}
