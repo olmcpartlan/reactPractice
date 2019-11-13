@@ -3,29 +3,55 @@ import './Home.css';
 import { Link } from 'react-router-dom';
 
 export class Time extends Component {
-    
-    render() {
 
-        let styles = {
-            display: 'inline'
-        }
-        
+	render() {
 
-        return (
+		let styles = {
+			display: 'inline'
+		}
 
-            <div className="box box-shadow">
-                <Link tag={Link} to="/">Back</Link>
-                <h2>Enter Time: </h2>
-                <div className="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" />
-                    <div className="input-group-append">
-                        {/* <button className="btn btn-outline-secondary" type="button" id="button-addon2" onClick={this.ButtonPress()}>Search</button> */}
-                    </div>
-                </div>
-            </div>
-        );
 
-    }
+		return (
+			<div>
+			<Link to="/"><button className="btn btn-primary">Home</button></Link>
+			<div className="row">
+				<div className="col">
+					<div className="box box-shadow">
+						
+						<h2>Enter Time: </h2>
+						<div className="input-group mb-3 boxItem">
+							<div className="form-group row">
+								<div className="col-10">
+									<p>From:</p>
+									<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+									<p>To:</p>
+									<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div className="col">
+					<div className="box box-shadow">
+						<h2>Enter Time</h2>
+						<div className="input-group mb-3">
+							<div className="form-group row">
+								<div className="col-10">
+									<p>From:</p>
+									<input className="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		);
+
+	}
 }
 
 
