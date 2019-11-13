@@ -17,33 +17,39 @@ export class Time extends Component {
 			<div className="row">
 				<div className="col">
 					<div className="box box-shadow">
-						
-						<h2>Enter Time: </h2>
-						<div className="input-group mb-3 boxItem">
-							<div className="form-group row">
-								<div className="col-10">
-									<p>From:</p>
-									<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
-									<p>To:</p>
-									<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+						<form>
+							<h2>Enter Time Range: </h2>
+							<div className="input-group mb-3 boxItem">
+								<div className="form-group row">
+									<div className="col-10">
+										<p>From:</p>
+										<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+										<p>To:</p>
+										<input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+									</div>
 								</div>
 							</div>
-						</div>
+							<Link to="/"><button className="btn btn-success">Next</button></Link>
+						</form>
+						
 					</div>
 				</div>
 				
 				<div className="col">
 					<div className="box box-shadow">
-						<h2>Enter Time</h2>
-						<div className="input-group mb-3">
-							<div className="form-group row">
-								<div className="col-10">
-									<p>From:</p>
-									<input className="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
+						<form>
+							<h2>Enter Specific Time:</h2>
+							<div className="input-group mb-3">
+								<div className="form-group row">
+									<div className="col-10">
+										<p>Time:</p>
+										<input className="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input" />
 
+									</div>
 								</div>
 							</div>
-						</div>
+							<Link to="/"><button className="btn btn-success">Next</button></Link>
+						</form>
 					</div>
 				</div>
 			</div>
