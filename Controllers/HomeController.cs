@@ -12,11 +12,10 @@ namespace react.Controllers
     {
         // GET: /<controller>/
         [HttpGet]
-        [Route("/")]
-        public void Index()
+        public IActionResult Index()
         {
             Console.WriteLine("inside new controller");
-            
+            return View("C:/Users/omcpartlan/Desktop/projects/reactPractice/ClientApp/public/index.html");
         }
     }
 }

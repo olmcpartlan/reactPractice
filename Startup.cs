@@ -32,12 +32,20 @@ namespace react
         public void ConfigureServices(IServiceCollection services)
         {
 
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/public";
+            });
 
             // In production, the React files will be served from this directory
             services.AddDbContext<ReactContext>(options => options.UseSqlServer(Configuration["DBInfo:ConnectionString"]));
             services.AddSession();
+            services.AddControllers();
+
+            
 
         }
+        
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -55,7 +63,7 @@ namespace react
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-            // app.UseSpaStaticFiles();
+            app.UseSpaStaticFiles();
 
 
             app.UseRouting();
@@ -82,9 +90,9 @@ namespace react
                 // });
 
             }
-            catch
+            catch(Exception e)
             {
-                Console.WriteLine("fukt");
+                Console.WriteLine(e);
             }
         }
 
