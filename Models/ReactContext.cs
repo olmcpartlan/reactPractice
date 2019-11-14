@@ -4,8 +4,8 @@ namespace react.Models
     public class ReactContext : DbContext
     {
         public ReactContext(DbContextOptions options) : base(options) { }
-        public DbSet<Airports> Airports { get; set; }
-        public DbSet<Runways> Runways { get; set; }
+        public DbSet<Airport> Airports { get; set; }
+        public DbSet<Runway> Runways { get; set; }
 
     }
 }

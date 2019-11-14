@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace react.Models
 {
-    public class Runways
+    public class Runway
     {
         [Key]
         public string id {get;set;}
